@@ -1,6 +1,6 @@
 # Identicon
 
-[[https://github.com/lemonizer/identicon/blob/master/lemonizer.png|alt=lemonizer]]
+<img src="https://raw.githubusercontent.com/lemonizer/identicon/master/lemonizer.png" />
 
 Module to generate a github style [identicon](https://en.wikipedia.org/wiki/Identicon) given a source input string.
 
