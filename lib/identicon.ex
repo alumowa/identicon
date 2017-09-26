@@ -7,6 +7,7 @@ defmodule Identicon do
       |> pick_color
       |> build_grid
       |> filter_odd_squares
+      |> build_pixel_map
   end
 
   defp hash_input(input) do
@@ -47,6 +48,20 @@ defmodule Identicon do
     end
 
     %Identicon.Image{image | grid: grid}
+  end
+
+  defp build_pixel_map(%Identicon.Image{grid: grid} = image) do
+
+    pixel_map = Enum.map grid, fn({_value, index}) ->
+
+      h_offset = rem(index, 5) * 50
+      v_offset = div(index, 5) * 50
+      p1 = {h_offset, v_offset}
+      p2 = {h_offset + 50, v_offset + 50}
+      {p1, p2}
+    end
+
+    %Identicon.Image{image | pixel_map: pixel_map}
   end
 
 end
