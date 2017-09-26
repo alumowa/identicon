@@ -1,21 +1,14 @@
 # Identicon
 
-**TODO: Add description**
+[[https://github.com/lemonizer/identicon/blob/master/lemonizer.png|alt=lemonizer]]
 
-## Installation
+Module to generate a github style [identicon](https://en.wikipedia.org/wiki/Identicon) given a source input string.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `identicon` to your list of dependencies in `mix.exs`:
+## Usage
 
-```elixir
-def deps do
-  [
-    {:identicon, "~> 0.1.0"}
-  ]
-end
+Pass in a string to and output path `Identicon.generate/2`:
+
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/identicon](https://hexdocs.pm/identicon).
-
+Identicon.generate "wangjangle", "/path/to/output/dir"
+#:ok
+```
